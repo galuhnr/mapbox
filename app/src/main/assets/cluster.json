@@ -1,0 +1,157 @@
+[
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Simokerto"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Sambikerep"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Tegalsari"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Bubutan"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Semampir"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Krembangan"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Bulak"
+	},
+	{
+		"cluster": 3,
+		"kategori": "Tinggi",
+		"kecamatan": "Kenjeran"
+	},
+	{
+		"cluster": 3,
+		"kategori": "Tinggi",
+		"kecamatan": "Tambaksari"
+	},
+	{
+		"cluster": 3,
+		"kategori": "Tinggi",
+		"kecamatan": "Gubeng"
+	},
+	{
+		"cluster": 2,
+		"kategori": "Sedang",
+		"kecamatan": "Rungkut"
+	},
+	{
+		"cluster": 3,
+		"kategori": "Tinggi",
+		"kecamatan": "Tenggilis"
+	},
+	{
+		"cluster": 2,
+		"kategori": "Sedang",
+		"kecamatan": "Gunung Anyar"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Sukolilo"
+	},
+	{
+		"cluster": 3,
+		"kategori": "Tinggi",
+		"kecamatan": "Mulyorejo"
+	},
+	{
+		"cluster": 3,
+		"kategori": "Tinggi",
+		"kecamatan": "Sawahan"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Wonokromo"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Karang Pilang"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Dukuh Pakis"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Wiyung"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Gayungan"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Wonocolo"
+	},
+	{
+		"cluster": 3,
+		"kategori": "Tinggi",
+		"kecamatan": "Jambangan"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Sukomanunggal"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Tandes"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Asemrowo"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Benowo"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Pakal"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Lakarsantri"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Pabean Cantian"
+	},
+	{
+		"cluster": 1,
+		"kategori": "Rendah",
+		"kecamatan": "Genteng"
+	}
+]
