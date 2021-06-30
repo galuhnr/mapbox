@@ -8,8 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.mapapp.retrofit.ApiEndpoint;
-import com.example.mapapp.retrofit.ApiService;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
@@ -23,17 +21,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.ref.WeakReference;
+import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.net.URL;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import timber.log.Timber;
 
 import static com.mapbox.mapboxsdk.style.expressions.Expression.get;
@@ -44,12 +40,10 @@ import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.fillColor;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    private static final String STATE_JSON_FILE = "cluster.json";
     private static final String DATA_MATCH_PROP = "kecamatan";
     private static final String DATA_STYLE_UNEMPLOYMENT_PROP = "cluster";
 
     private final String TAG = "MainActivity";
-    private List<ModelAPI> modelAPIList = new ArrayList<>();
 
     private MapView mapView;
     private MapboxMap mapboxMap;
@@ -96,9 +90,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+
     private class LoadJson extends AsyncTask<Void, Void, Expression.Stop[]>{
 
         private WeakReference<MainActivity> weakReference;
+
+        String line;
 
         LoadJson(MainActivity activity) {
             this.weakReference = new WeakReference<>(activity);
@@ -110,31 +107,21 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 MainActivity activity = weakReference.get();
                 if (activity != null) {
 
-                    // get data dari rest api http://10.0.0.2:8000/api/cluster2016
-                    ApiEndpoint apiEndpoint = ApiService.getRetrofit().create(ApiEndpoint.class);
-                    Call<List<ModelAPI>> call = apiEndpoint.getCluster2016();
-                    call.enqueue(new Callback<List<ModelAPI>>() {
-                        @Override
-                        public void onResponse(Call<List<ModelAPI>> call, Response<List<ModelAPI>> response) {
-                            modelAPIList = response.body();
-//                            String json = new Gson().toJson(modelAPIList);
-//                            try {
-//                                statesArray = new JSONArray(json);
-//                            } catch (JSONException e) {
-//                                e.printStackTrace();
-//                            }
+                    try {
+                        URL url = new URL("http://10.0.2.2:8000/api/cluster2016");
+                        HttpURLConnection hr = (HttpURLConnection) url.openConnection();
+//                        Log.d(TAG,"sc"+hr.getResponseCode());
+                        if(hr.getResponseCode() == 200){
+                            InputStream is = hr.getInputStream();
+                            BufferedReader br = new BufferedReader(new InputStreamReader(is));
+                            line = br.readLine();
                         }
-                        @Override
-                        public void onFailure(Call<List<ModelAPI>> call, Throwable t) {
-                            Log.d( TAG, t.toString());
-                        }
-                    });
+                    }catch (Exception e){
+                        Log.d(TAG,"gagal"+e);
+                    }
 
-                    //coding asli dari tutorial mapbox baca data json dari local di folder assets,
-                    // berhasil kalo baca json dari file local
-
-                    InputStream inputStream = activity.getAssets().open(STATE_JSON_FILE);
-                    activity.statesArray = new JSONArray(convertStreamToString(inputStream));
+                    activity.statesArray = new JSONArray(line);
+                    Log.d(TAG,"c"+activity.statesArray);
 
                     Expression.Stop[] stops = new Expression.Stop[activity.statesArray.length()];
                     for (int x = 0; x < activity.statesArray.length(); x++) {
@@ -167,11 +154,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Timber.d("Exception Loading GeoJSON: %s", exception.toString());
             }
             return null;
-        }
-
-        static String convertStreamToString(InputStream is) {
-            Scanner scanner = new Scanner(is).useDelimiter("\\A");
-            return scanner.hasNext() ? scanner.next() : "";
         }
 
         @Override

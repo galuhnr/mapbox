@@ -6,6 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiService {
     private static String BASE_URL = "http://10.0.2.2:8000/api/";
     private static Retrofit retrofit ;
+    ApiEndpoint apiEndpoint;
     public static Retrofit getRetrofit(){
         if(retrofit == null) {
             retrofit = new Retrofit.Builder()
@@ -15,4 +16,5 @@ public class ApiService {
         }
         return retrofit;
     }
+
 }
