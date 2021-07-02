@@ -36,12 +36,14 @@ import static com.mapbox.mapboxsdk.style.expressions.Expression.get;
 import static com.mapbox.mapboxsdk.style.expressions.Expression.match;
 import static com.mapbox.mapboxsdk.style.expressions.Expression.rgba;
 import static com.mapbox.mapboxsdk.style.expressions.Expression.stop;
+import static com.mapbox.mapboxsdk.style.expressions.Expression.toNumber;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.fillColor;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    private static final String DATA_MATCH_PROP = "kecamatan";
-    private static final String DATA_STYLE_UNEMPLOYMENT_PROP = "cluster";
+    private static final String DATA_MATCH_API = "kecamatan";
+    private static final String DATA_MATCH_MAP = "state_code";
+    private static final String DATA_STYLE = "cluster";
 
     private final String TAG = "MainActivity";
 
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         FillLayer statesJoinLayer = new FillLayer("states-join", "sbydata");
         statesJoinLayer.setSourceLayer("sbydata");
         statesJoinLayer.withProperties(
-                fillColor(match(Expression.toString(get(DATA_MATCH_PROP)),
+                fillColor(match(toNumber(get(DATA_MATCH_MAP)),
                         rgba(0, 0, 0, 1), stops))
         );
         // Add layer to map below the "waterway-label" layer
@@ -110,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     try {
                         URL url = new URL("http://10.0.2.2:8000/api/cluster2016");
                         HttpURLConnection hr = (HttpURLConnection) url.openConnection();
-//                        Log.d(TAG,"sc"+hr.getResponseCode());
+                        Log.e(TAG,"sc"+hr.getResponseCode());
                         if(hr.getResponseCode() == 200){
                             InputStream is = hr.getInputStream();
                             BufferedReader br = new BufferedReader(new InputStreamReader(is));
@@ -128,19 +130,19 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         try {
                             // pewarnaan tiap cluster
                             JSONObject singleState = activity.statesArray.getJSONObject(x);
-                            if(singleState.getDouble(DATA_STYLE_UNEMPLOYMENT_PROP)==1){
+                            if(singleState.getDouble(DATA_STYLE)==1){
                                 stops[x] = stop(
-                                        singleState.getString(DATA_MATCH_PROP),
+                                        Double.parseDouble(singleState.getString(DATA_MATCH_API)),
                                         rgba(0, 255, 0, 1)
                                 );
-                            }else if(singleState.getDouble(DATA_STYLE_UNEMPLOYMENT_PROP)==2){
+                            }else if(singleState.getDouble(DATA_STYLE)==2){
                                 stops[x] = stop(
-                                        singleState.getString(DATA_MATCH_PROP),
+                                        Double.parseDouble(singleState.getString(DATA_MATCH_API)),
                                         rgba(255, 255, 0, 1)
                                 );
-                            }else if(singleState.getDouble(DATA_STYLE_UNEMPLOYMENT_PROP)==3){
+                            }else if(singleState.getDouble(DATA_STYLE)==3){
                                 stops[x] = stop(
-                                        singleState.getString(DATA_MATCH_PROP),
+                                        Double.parseDouble(singleState.getString(DATA_MATCH_API)),
                                         rgba(255, 0, 0, 1)
                                 );
                             }

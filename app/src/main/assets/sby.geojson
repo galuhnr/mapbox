@@ -5,7 +5,7 @@
             "type": "Feature",
             "id": 0,
             "properties": {
-                "state_code": "1",
+                "state_code": "7",
                 "kecamatan": "Genteng"
             },
             "geometry": {
@@ -19,7 +19,7 @@
             "type": "Feature",
             "id": 1,
             "properties": {
-                "state_code": "2",
+                "state_code": "10",
                 "kecamatan": "Simokerto"
             },
             "geometry": {
@@ -33,7 +33,7 @@
             "type": "Feature",
             "id": 2,
             "properties": {
-                "state_code": "3",
+                "state_code": "12",
                 "kecamatan": "Semampir"
             },
             "geometry": {
@@ -47,7 +47,7 @@
             "type": "Feature",
             "id": 3,
             "properties": {
-                "state_code": "4",
+                "state_code": "15",
                 "kecamatan": "Kenjeran"
             },
             "geometry": {
@@ -61,7 +61,7 @@
             "type": "Feature",
             "id": 4,
             "properties": {
-                "state_code": "5",
+                "state_code": "14",
                 "kecamatan": "Bulak"
             },
             "geometry": {
@@ -75,7 +75,7 @@
             "type": "Feature",
             "id": 5,
             "properties": {
-                "state_code": "6",
+                "state_code": "13",
                 "kecamatan": "Krembangan"
             },
             "geometry": {
@@ -89,7 +89,7 @@
             "type": "Feature",
             "id": 6,
             "properties": {
-                "state_code": "7",
+                "state_code": "9",
                 "kecamatan": "Bubutan"
             },
             "geometry": {
@@ -103,7 +103,7 @@
             "type": "Feature",
             "id": 7,
             "properties": {
-                "state_code": "8",
+                "state_code": "23",
                 "kecamatan": "Sawahan"
             },
             "geometry": {
@@ -117,7 +117,7 @@
             "type": "Feature",
             "id": 8,
             "properties": {
-                "state_code": "9",
+                "state_code": "0",
                 "kecamatan": "Sukomanunggal"
             },
             "geometry": {
@@ -131,7 +131,7 @@
             "type": "Feature",
             "id": 9,
             "properties": {
-                "state_code": "10",
+                "state_code": "2",
                 "kecamatan": "Asemrowo"
             },
             "geometry": {
@@ -145,7 +145,7 @@
             "type": "Feature",
             "id": 10,
             "properties": {
-                "state_code": "11",
+                "state_code": "4",
                 "kecamatan": "Pakal"
             },
             "geometry": {
@@ -159,7 +159,7 @@
             "type": "Feature",
             "id": 11,
             "properties": {
-                "state_code": "12",
+                "state_code": "1",
                 "kecamatan": "Tandes"
             },
             "geometry": {
@@ -173,7 +173,7 @@
             "type": "Feature",
             "id": 12,
             "properties": {
-                "state_code": "13",
+                "state_code": "3",
                 "kecamatan": "Benowo"
             },
             "geometry": {
@@ -187,7 +187,7 @@
             "type": "Feature",
             "id": 13,
             "properties": {
-                "state_code": "14",
+                "state_code": "16",
                 "kecamatan": "Tambaksari"
             },
             "geometry": {
@@ -201,7 +201,7 @@
             "type": "Feature",
             "id": 14,
             "properties": {
-                "state_code": "15",
+                "state_code": "5",
                 "kecamatan": "Lakarsantri"
             },
             "geometry": {
@@ -215,7 +215,7 @@
             "type": "Feature",
             "id": 15,
             "properties": {
-                "state_code": "16",
+                "state_code": "21",
                 "kecamatan": "Sukolilo"
             },
             "geometry": {
@@ -229,7 +229,7 @@
             "type": "Feature",
             "id": 16,
             "properties": {
-                "state_code": "17",
+                "state_code": "22",
                 "kecamatan": "Mulyorejo"
             },
             "geometry": {
@@ -243,7 +243,7 @@
             "type": "Feature",
             "id": 17,
             "properties": {
-                "state_code": "18",
+                "state_code": "26",
                 "kecamatan": "Dukuh Pakis"
             },
             "geometry": {
@@ -257,7 +257,7 @@
             "type": "Feature",
             "id": 18,
             "properties": {
-                "state_code": "19",
+                "state_code": "6",
                 "kecamatan": "Sambikerep"
             },
             "geometry": {
@@ -271,7 +271,7 @@
             "type": "Feature",
             "id": 19,
             "properties": {
-                "state_code": "20",
+                "state_code": "17",
                 "kecamatan": "Gubeng"
             },
             "geometry": {
@@ -285,7 +285,7 @@
             "type": "Feature",
             "id": 20,
             "properties": {
-                "state_code": "21",
+                "state_code": "18",
                 "kecamatan": "Rungkut"
             },
             "geometry": {
@@ -299,7 +299,7 @@
             "type": "Feature",
             "id": 21,
             "properties": {
-                "state_code": "22",
+                "state_code": "28",
                 "kecamatan": "Gayungan"
             },
             "geometry": {
@@ -313,7 +313,7 @@
             "type": "Feature",
             "id": 22,
             "properties": {
-                "state_code": "23",
+                "state_code": "19",
                 "kecamatan": "Tenggilis"
             },
             "geometry": {
@@ -327,7 +327,7 @@
             "type": "Feature",
             "id": 23,
             "properties": {
-                "state_code": "24",
+                "state_code": "20",
                 "kecamatan": "Gunung Anyar"
             },
             "geometry": {
@@ -355,7 +355,7 @@
             "type": "Feature",
             "id": 25,
             "properties": {
-                "state_code": "26",
+                "state_code": "27",
                 "kecamatan": "Wiyung"
             },
             "geometry": {
@@ -369,7 +369,7 @@
             "type": "Feature",
             "id": 26,
             "properties": {
-                "state_code": "27",
+                "state_code": "25",
                 "kecamatan": "Karang Pilang"
             },
             "geometry": {
@@ -383,7 +383,7 @@
             "type": "Feature",
             "id": 27,
             "properties": {
-                "state_code": "28",
+                "state_code": "29",
                 "kecamatan": "Wonokromo"
             },
             "geometry": {
@@ -397,7 +397,7 @@
             "type": "Feature",
             "id": 28,
             "properties": {
-                "state_code": "29",
+                "state_code": "30",
                 "kecamatan": "Jambangan"
             },
             "geometry": {
@@ -411,7 +411,7 @@
             "type": "Feature",
             "id": 29,
             "properties": {
-                "state_code": "30",
+                "state_code": "8",
                 "kecamatan": "Tegalsari"
             },
             "geometry": {
@@ -425,7 +425,7 @@
             "type": "Feature",
             "id": 30,
             "properties": {
-                "state_code": "31",
+                "state_code": "11",
                 "kecamatan": "Pabean Cantian"
             },
             "geometry": {
